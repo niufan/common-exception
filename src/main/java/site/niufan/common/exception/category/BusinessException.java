@@ -1,6 +1,6 @@
 package site.niufan.common.exception.category;
 
-import site.niufan.common.exception.error.Error;
+import site.niufan.common.exception.message.category.BusinessExceptionMessage;
 
 /**
  * 业务异常类
@@ -9,15 +9,15 @@ import site.niufan.common.exception.error.Error;
  */
 public class BusinessException extends CommonException {
 
-    public BusinessException(Error errorCode) {
-        super(errorCode);
+    public BusinessException(BusinessExceptionMessage message) {
+        super(message);
     }
 
-    public BusinessException(Error errorCode, Throwable cause) {
-        super(errorCode, cause);
+    public BusinessException(BusinessExceptionMessage message, Throwable cause) {
+        super(message, cause);
     }
 
-    public BusinessException(CommonException commonException) {
-        super(commonException);
+    public BusinessException(Throwable cause) {
+        super(cause);
     }
 }

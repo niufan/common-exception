@@ -1,24 +1,24 @@
 package site.niufan.common.exception.category;
 
-import site.niufan.common.exception.error.Error;
+import site.niufan.common.exception.message.category.ExceptionMessage;
 
 /**
  * 通用异常类
  * @author Fan Niu
  * @since 2018/7/17
  */
-public class CommonException extends RuntimeException {
+public class CommonException extends RuntimeException implements Failure {
 
-    public CommonException(Error errorCode) {
-        super(String.valueOf(errorCode));
+    public CommonException(ExceptionMessage message) {
+        super(String.valueOf(message));
     }
 
-    public CommonException(Error errorCode, Throwable cause) {
-        super(String.valueOf(errorCode), cause);
+    public CommonException(ExceptionMessage message, Throwable cause) {
+        super(String.valueOf(message), cause);
     }
 
-    public CommonException(CommonException commonException) {
-        super(commonException);
+    public CommonException(Throwable cause) {
+        super(cause);
     }
 
     public Throwable getRootCause() {

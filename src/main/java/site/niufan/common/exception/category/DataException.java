@@ -1,6 +1,6 @@
 package site.niufan.common.exception.category;
 
-import site.niufan.common.exception.error.Error;
+import site.niufan.common.exception.message.category.DataExceptionMessage;
 
 /**
  * 数据异常类
@@ -9,15 +9,15 @@ import site.niufan.common.exception.error.Error;
  */
 public class DataException extends CommonException {
 
-    public DataException(Error errorCode) {
-        super(errorCode);
+    public DataException(DataExceptionMessage message) {
+        super(message);
     }
 
-    public DataException(Error errorCode, Throwable cause) {
-        super(errorCode, cause);
+    public DataException(DataExceptionMessage message, Throwable cause) {
+        super(message, cause);
     }
 
-    public DataException(CommonException commonException) {
-        super(commonException);
+    public DataException(Throwable cause) {
+        super(cause);
     }
 }

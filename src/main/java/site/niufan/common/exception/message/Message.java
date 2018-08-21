@@ -1,11 +1,11 @@
-package site.niufan.common.exception.error;
+package site.niufan.common.exception.message;
 
 /**
  * 错误码接口
  * @author Fan Niu
  * @since 2018/7/17
  */
-public interface Error<Code, Message, Type> {
+public interface Message<Code, Message, Type> {
 
     /**
      * 获取编码
@@ -27,10 +27,10 @@ public interface Error<Code, Message, Type> {
 
     /**
      * 判断是否相等
-     * @param error 错误
+     * @param message 消息
      * @return 是否相等
      */
-    boolean equals(Error error);
+    boolean equals(site.niufan.common.exception.message.Message message);
 
     /**
      * 转换成字符串

@@ -1,6 +1,6 @@
 package site.niufan.common.exception.category;
 
-import site.niufan.common.exception.error.Error;
+import site.niufan.common.exception.message.category.IllegalArgumentExceptionMessage;
 
 /**
  * 不合法的参数异常类
@@ -9,15 +9,15 @@ import site.niufan.common.exception.error.Error;
  */
 public class IllegalArgumentException extends CommonException {
 
-    public IllegalArgumentException(Error errorCode) {
-        super(errorCode);
+    public IllegalArgumentException(IllegalArgumentExceptionMessage message) {
+        super(message);
     }
 
-    public IllegalArgumentException(Error errorCode, Throwable cause) {
-        super(errorCode, cause);
+    public IllegalArgumentException(IllegalArgumentExceptionMessage message, Throwable cause) {
+        super(message, cause);
     }
 
-    public IllegalArgumentException(CommonException commonException) {
-        super(commonException);
+    public IllegalArgumentException(Throwable cause) {
+        super(cause);
     }
 }
